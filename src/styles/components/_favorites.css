@@ -1,19 +1,21 @@
-/* Favorites Components */
+
 .favorites-section {
-  background: var(--card);
+  background: var(--card-glass);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   padding: 1.5rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   margin-bottom: 2rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--card-border);
 }
 
 .favorites-section h2 {
-  color: var(--primary);
-  margin-bottom: 1rem;
+  color: var(--text-strong);
+  margin-bottom: 1.5rem;
   font-size: 1.5rem;
-  border-bottom: 2px solid var(--primary);
-  padding-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .favorites-header {
@@ -27,23 +29,27 @@
 
 .clear-all-btn {
   padding: 8px 16px;
-  background: var(--error);
+  background: rgba(255, 107, 107, 0.8);
+  backdrop-filter: blur(5px);
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9rem;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .clear-all-btn:hover {
-  background: #c0392b;
+  background: rgba(255, 107, 107, 1);
+  transform: translateY(-2px);
 }
 
 .favorites-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.2rem;
 }
 
 .favorite-item {
@@ -52,46 +58,68 @@
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: all 0.3s ease;
-  background: white;
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
+  
+  display: flex;
+  flex-direction: column;
 }
 
 .favorite-item:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-hover);
+  border-color: var(--ocean-light);
 }
 
-.favorite-item img {
+
+.favorite-image-container {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 180px; 
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.favorite-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
   display: block;
 }
 
 .remove-btn {
   width: 100%;
   padding: 10px;
-  background: var(--error);
+  background: rgba(255, 107, 107, 0.9);
+  backdrop-filter: blur(5px);
   color: white;
   border: none;
   cursor: pointer;
   font-weight: 600;
   transition: background-color 0.3s ease;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
 }
 
 .remove-btn:hover {
-  background: #c0392b;
+  background: rgba(255, 107, 107, 1);
 }
 
 .favorite-info {
   padding: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .favorite-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   flex-wrap: wrap;
   gap: 4px;
 }
@@ -99,37 +127,67 @@
 .animal-badge {
   padding: 4px 8px;
   border-radius: 12px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
 }
 
 .animal-badge.cat {
-  background: #e8f4fd;
-  color: var(--primary);
+  background: rgba(103, 213, 247, 0.9);
+  color: #1a3c4d;
 }
 
 .animal-badge.dog {
-  background: #fff3cd;
+  background: rgba(255, 193, 7, 0.9);
   color: #856404;
 }
 
 .breed-name {
   font-weight: 600;
-  color: var(--text);
-  font-size: 0.9rem;
+  color: var(--text-strong);
+  font-size: 0.85rem;
 }
 
 .added-date {
   color: var(--text-light);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  margin-top: auto;
 }
 
 .favorites-instruction {
-  background: #e8f4fd;
+  background: rgba(103, 213, 247, 0.2);
+  backdrop-filter: blur(5px);
   padding: 1rem;
   border-radius: 6px;
   text-align: center;
-  color: var(--primary);
+  color: var(--text-strong);
   margin-top: 1rem;
-  border: 1px solid #b3d9ff;
+  border: 1px solid rgba(103, 213, 247, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive favorites */
+@media (max-width: 768px) {
+  .favorites-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .favorite-image-container {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .favorite-image-container {
+    height: 130px;
+  }
+
+  .favorites-section {
+    padding: 1rem;
+  }
 }
