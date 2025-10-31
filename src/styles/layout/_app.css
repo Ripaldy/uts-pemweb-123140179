@@ -1,4 +1,4 @@
-/* Main App Layout */
+/* Main App Layout dengan Glassmorphism */
 .app {
   min-height: 100vh;
   max-width: 1200px;
@@ -7,22 +7,63 @@
   position: relative;
 }
 
-/* Card Layout */
+/* Background efek air */
+.app::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(168, 230, 247, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(103, 213, 247, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(42, 157, 190, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Glass Card Layout */
 .card {
-  background: var(--card);
+  background: var(--card-glass);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   padding: 1.5rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   margin-bottom: 2rem;
-  border: 1px solid var(--border);
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  border: 1px solid var(--card-border);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efek shine pada card */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.card:hover::before {
+  left: 100%;
 }
 
 .card:hover {
-  background: var(--card-hover);
+  background: var(--card-glass-hover);
+  border-color: var(--card-border-hover);
   box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
+  transform: translateY(-5px);
 }
 
 .section-header {
@@ -36,17 +77,19 @@
 
 .section-header h2 {
   margin: 0;
-  color: var(--primary);
+  color: var(--text);
   position: relative;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .section-header h2::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -8px;
   left: 0;
   width: 50px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--ocean-medium), var(--ocean-light));
+  height: 2px;
+  background: linear-gradient(90deg, var(--ocean-light), transparent);
   border-radius: 2px;
 }
