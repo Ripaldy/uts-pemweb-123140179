@@ -1,0 +1,72 @@
+/* Loading and Utility Components */
+.loading,
+.error,
+.no-favorites,
+.no-images,
+.no-data {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border);
+}
+
+.loading {
+  background: rgba(212, 244, 255, 0.6);
+  color: var(--ocean-deep);
+}
+
+.error {
+  color: var(--error);
+  background: rgba(255, 71, 87, 0.1);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 71, 87, 0.2);
+}
+
+.no-favorites,
+.no-images,
+.no-data {
+  color: var(--text-light);
+  font-style: italic;
+  background: rgba(248, 249, 250, 0.8);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(168, 230, 247, 0.3);
+  border-top: 4px solid var(--ocean-medium);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.retry-btn {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, var(--ocean-medium), var(--ocean-deep));
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.retry-btn:hover {
+  background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-medium));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}

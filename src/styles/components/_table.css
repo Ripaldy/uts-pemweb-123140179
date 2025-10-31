@@ -1,0 +1,119 @@
+/* Table Components */
+.facts-section {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.facts-section h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.facts-section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--ocean-medium), var(--ocean-light));
+  border-radius: 2px;
+}
+
+.refresh-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--ocean-medium), var(--ocean-deep));
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-medium));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.refresh-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(30, 111, 140, 0.1);
+}
+
+.facts-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-width: 500px;
+}
+
+.facts-table th,
+.facts-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.facts-table th {
+  background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-medium));
+  color: white;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+.facts-table tr:nth-child(even) {
+  background: rgba(212, 244, 255, 0.3);
+}
+
+.facts-table tr:hover {
+  background: rgba(168, 230, 247, 0.4);
+}
+
+.fact-number {
+  font-weight: 600;
+  color: var(--ocean-deep);
+  width: 50px;
+  text-align: center;
+}
+
+.fact-text {
+  max-width: 500px;
+  word-wrap: break-word;
+  line-height: 1.4;
+  padding-right: 20px;
+}
+
+.fact-type {
+  font-weight: 500;
+  color: var(--ocean-deep);
+  white-space: nowrap;
+}
+
+.fact-category {
+  font-weight: 500;
+  color: var(--ocean-medium);
+  white-space: nowrap;
+}
