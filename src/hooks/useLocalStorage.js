@@ -28,7 +28,6 @@ export const useLocalStorage = (key, initialValue) => {
     }
   };
 
-  // Listen for storage changes in other tabs/windows
   useEffect(() => {
     const handleStorageChange = (e) => {
       if (e.key === key && e.newValue !== JSON.stringify(storedValue)) {
