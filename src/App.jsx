@@ -73,8 +73,6 @@ const App = () => {
       setFactsLoading(false);
     }
   }, [currentAnimal]);
-
-  // Initial data fetch
   useEffect(() => {
     fetchImages();
     fetchFacts();
@@ -92,7 +90,6 @@ const App = () => {
     return () => clearInterval(interval);
   }, [autoRefresh, refreshInterval, fetchImages, fetchFacts]);
 
-  // Favorite images functionality menggunakan storage service
   const addToFavorites = (imageUrl) => {
     const newFavorites = addFavorite({
       url: imageUrl,
