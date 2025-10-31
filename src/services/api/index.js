@@ -66,7 +66,7 @@ export const animalApi = {
         return await module.fetchCatFacts(count);
       } else {
         const module = await import("./dogApi");
-        return await module.fetchDogFacts(count); // ← SEKARANG DARI API, bukan hardcoded
+        return await module.fetchDogFacts(count); 
       }
     } catch (error) {
       console.error(`Error fetching ${animal} facts:`, error);
