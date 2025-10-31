@@ -1,4 +1,4 @@
-/* CSS Variables - Ocean Theme dengan Glassmorphism */
+/* CSS Variables - Ocean Theme dengan Glassmorphism yang Lebih Baik */
 :root {
   /* Ocean Color Palette */
   --ocean-deep: #1e6f8c;
@@ -9,32 +9,34 @@
   --sand: #f0e6d2;
   --coral: #ff6b6b;
   --seaweed: #2e8b57;
-  
+
   /* Semantic Colors based on Ocean Theme */
   --primary: var(--ocean-deep);
   --secondary: var(--coral);
   --success: var(--seaweed);
   --error: #ff4757;
   --warning: #ffa502;
-  
-  /* Glassmorphism Backgrounds */
-  --bg: linear-gradient(135deg, #67d5f7 0%, #2a9dbe 50%, #1e6f8c 100%);
-  --card-glass: rgba(255, 255, 255, 0.15);
-  --card-glass-hover: rgba(255, 255, 255, 0.25);
-  --card-border: rgba(255, 255, 255, 0.2);
-  --card-border-hover: rgba(255, 255, 255, 0.3);
-  
-  /* Text */
+
+  /* Glassmorphism Backgrounds - Lebih Gelap untuk Kontras */
+  --bg: linear-gradient(135deg, #1e6f8c 0%, #2a9dbe 50%, #67d5f7 100%);
+  --card-glass: rgba(255, 255, 255, 0.12);
+  --card-glass-hover: rgba(255, 255, 255, 0.18);
+  --card-border: rgba(255, 255, 255, 0.15);
+  --card-border-hover: rgba(255, 255, 255, 0.25);
+
+  /* Text Colors - Lebih Kontras */
   --text: #ffffff;
-  --text-light: rgba(255, 255, 255, 0.8);
-  
+  --text-light: rgba(255, 255, 255, 0.9);
+  --text-strong: #ffffff;
+  --text-label: rgba(255, 255, 255, 0.95);
+
   /* Borders */
   --border: rgba(255, 255, 255, 0.2);
   --border-dark: rgba(255, 255, 255, 0.3);
-  
+
   /* Layout */
-  --radius: 16px;
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.2);
-  --glass-blur: blur(12px);
+  --radius: 12px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.25);
+  --glass-blur: blur(10px);
 }
