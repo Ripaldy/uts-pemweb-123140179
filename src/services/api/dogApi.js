@@ -144,6 +144,5 @@ export const getFallbackDogFacts = (count = 5) => {
     "Dogs have 42 teeth on average.",
   ];
 
-  // Return random selection of facts
   return allFacts.sort(() => 0.5 - Math.random()).slice(0, count);
 };
