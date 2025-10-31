@@ -1,4 +1,4 @@
-/* Main CSS Import File */
+
 
 /* Base */
 @import "./base/_reset.css";
@@ -15,6 +15,7 @@
 @import "./components/_gallery.css";
 @import "./components/_table.css";
 @import "./components/_favorites.css";
+@import "./components/_modal.css"; 
 
 /* Utilities */
 @import "./utilities/_loading.css";
