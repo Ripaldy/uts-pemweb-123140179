@@ -64,7 +64,7 @@ Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
 
 2.  **Masuk ke direktori proyek:**
     ```bash
-    cd uts-pemweb-[NIM_ANDA]
+    cd uts-pemweb-123140179
     ```
 
 3.  **Install semua dependencies yang dibutuhkan:**
