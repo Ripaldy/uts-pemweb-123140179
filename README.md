@@ -1,24 +1,24 @@
 # Animal Facts & Images
 
-## 👤 Identitas
+## Identitas
 
 * **Nama:** Ripaldy Saputra Lumbantoruan
 * **NIM:** 123140179
 
 ---
 
-## 🚀 Link Deployment Vercel
+## Link Deployment Vercel
 https://uts-pemweb-123140179.vercel.app/
 
 ---
 
-## 📝 Deskripsi Project
+## Deskripsi Project
 
 Aplikasi "Animal Facts & Images" adalah sebuah *dashboard* interaktif yang dibuat menggunakan React dan Vite. Aplikasi ini memungkinkan pengguna untuk menjelajahi dunia kucing dan anjing dengan cara yang menyenangkan.
 
 Pengguna dapat beralih antara galeri kucing dan anjing, melihat gambar-gambar berkualitas tinggi, membaca fakta-fakta menarik yang diambil dari API publik, dan bahkan menyimpan gambar favorit mereka. Proyek ini menggunakan `localStorage` untuk menyimpan data favorit sehingga pilihan pengguna tetap ada bahkan setelah browser ditutup.
 
-### ✨ Fitur Utama
+### Fitur Utama
 
 * **Navigasi Hewan:** Tombol untuk beralih antara mode "Cats" dan "Dogs".
 * **Form Pilihan:** Form interaktif untuk memilih *breed*, jumlah gambar, dan tipe galeri (acak atau berdasarkan breed).
@@ -31,7 +31,7 @@ Pengguna dapat beralih antara galeri kucing dan anjing, melihat gambar-gambar be
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 * **Frontend:** React 18 (Vite)
 * **State Management:** React Hooks (`useState`, `useEffect`)
@@ -53,7 +53,7 @@ Berikut adalah tampilan dari aplikasi yang sedang berjalan:
 
 ---
 
-## 📦 Cara Instalasi dan Menjalankan
+## Cara Instalasi dan Menjalankan
 
 Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
 
